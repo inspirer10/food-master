@@ -1,3 +1,5 @@
+import Header from '@/Components/Header';
+import RecipesList from '@/Components/RecipesList';
 import Head from 'next/head';
 
 export default function Home() {
@@ -15,7 +17,13 @@ export default function Home() {
                 />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <h1>Food Master</h1>
+
+            <Header />
+            <RecipesList />
+            <h2>Team - people behind</h2>
+            <h2>Testimonials</h2>
+            <h2>FAQ</h2>
+            <h2>Footer</h2>
         </>
     );
 }
