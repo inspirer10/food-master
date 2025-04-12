@@ -11,11 +11,15 @@ function Header() {
                 <div className='links-wrapper'>
                     <a>Home</a>
                     <a>Recipes</a>
-                    <a>Recipes</a>
-                    <a>Testimonials</a>
+                    <a>Why Us?</a>
+                    <a>Favorites</a>
                     <a>FAQ</a>
                 </div>
-                <button>Get Started</button>
+
+                <div className='buttons-wrapper'>
+                    <button className='contact-btn'>Get in Touch</button>
+                    <button className='-btn'>Get Started</button>
+                </div>
             </nav>
         </header>
     );

@@ -1,18 +1,19 @@
 .recipes-list_section {
     width: 80%;
-    margin: 15vh auto;
+    margin: 17.5vh auto;
     .heading-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 1.5rem;
+        position: relative;
         h2 {
-            font-size: 2rem;
+            font-size: 2.25rem;
             font-weight: 600;
             letter-spacing: -0.5px;
         }
         .icon {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             cursor: pointer;
         }
     }
@@ -53,7 +54,7 @@
                 border-radius: 8px;
                 opacity: 0;
                 cursor: pointer;
-                transition: .2s ease;
+                transition: .275s ease-in-out;
                 &:hover {
                     .fav-icon {
                         color: red;

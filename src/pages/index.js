@@ -1,4 +1,5 @@
 import Header from '@/Components/Header';
+import Introduction from '@/Components/Introduction';
 import RecipesList from '@/Components/RecipesList';
 import Head from 'next/head';
 
@@ -19,6 +20,7 @@ export default function Home() {
             </Head>
 
             <Header />
+            <Introduction />
             <RecipesList />
             <h2>Team - people behind</h2>
             <h2>Testimonials</h2>
