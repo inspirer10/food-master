@@ -9,7 +9,13 @@ function Introduction() {
     return (
         <>
             <section className='introduction_section'>
-                <motion.div className='preHeading'>
+                <motion.div
+                    className='preHeading'
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.75, ease: 'easeInOut' }}
+                    viewport={{ once: true }}
+                >
                     <p>
                         Explore great meals just for you <IoRestaurant />
                     </p>
@@ -42,7 +48,7 @@ function Introduction() {
                 <motion.h2
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.75, ease: 'easeInOut' }}
+                    transition={{ duration: 1.25, ease: 'easeInOut' }}
                     viewport={{ once: true }}
                 >
                     Find <span className='colored-span'>perfect recipes</span>{' '}

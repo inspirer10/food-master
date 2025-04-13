@@ -2,8 +2,23 @@ import Header from '@/Components/Header';
 import Introduction from '@/Components/Introduction';
 import RecipesList from '@/Components/RecipesList';
 import Head from 'next/head';
+import { useEffect } from 'react';
+import Lenis from 'lenis';
+import Testimonials from '@/Components/Testimonials';
+import FoodSaver from '@/Components/FoodSaver';
 
 export default function Home() {
+    useEffect(() => {
+        const lenis = new Lenis();
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    }, []);
+
     return (
         <>
             <Head>
@@ -18,14 +33,15 @@ export default function Home() {
                 />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-
             <Header />
             <Introduction />
             <RecipesList />
-            <h2>Team - people behind</h2>
-            <h2>Testimonials</h2>
-            <h2>FAQ</h2>
-            <h2>Footer</h2>
+            <Testimonials />
+            <FoodSaver />
+
+            <h2 style={{ textAlign: 'center' }}>Team - people behind</h2>
+            <h2 style={{ textAlign: 'center' }}>FAQ</h2>
+            <h2 style={{ textAlign: 'center' }}>Footer</h2>
         </>
     );
 }

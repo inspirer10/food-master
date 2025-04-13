@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import RecipeCard from './RecipeCard';
 import { MdOutlineViewModule } from 'react-icons/md';
 import { FiGrid } from 'react-icons/fi';
+import { FiSearch } from 'react-icons/fi';
 
 function RecipesList() {
     const recipesData = [
@@ -144,9 +145,16 @@ function RecipesList() {
     return (
         <section className='recipes-list_section'>
             <div className='heading-wrapper'>
-                <h2>Recipes List</h2>
+                <h2>
+                    <FiGrid className='icon' /> Recipes List
+                </h2>
 
-                <FiGrid className='icon' />
+                <label>
+                    <span className='search-icon'>
+                        <FiSearch />
+                    </span>
+                    <input id='search' type='text' placeholder='Spaghetti' />
+                </label>
             </div>
 
             <article className='recipes-container'>
