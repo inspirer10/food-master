@@ -5,6 +5,12 @@ import { GrMoney } from 'react-icons/gr';
 import { FaQuoteLeft } from 'react-icons/fa';
 import Image from 'next/image';
 
+import { FaWeightScale } from 'react-icons/fa6';
+import { GiWeightLiftingUp } from 'react-icons/gi';
+import { LuLeafyGreen } from 'react-icons/lu';
+import { TbHealthRecognition } from 'react-icons/tb';
+import { FaBowlFood } from 'react-icons/fa6';
+
 function Testimonials() {
     const benefitsData = [
         {
@@ -98,6 +104,37 @@ function Testimonials() {
                         <p className='text'>{description}</p>
                     </div>
                 ))}
+            </article>
+
+            <h3 className='additional-benefits-header'>Food Master...</h3>
+            <article className='additional-benefits-container'>
+                <div>
+                    <p>
+                        For <span>Weight Loss</span>
+                    </p>
+                    <GiWeightLiftingUp className='icon' />
+                </div>
+                <div>
+                    <p>
+                        For <span>Better Diet</span>
+                    </p>
+
+                    <FaBowlFood className='icon' />
+                </div>
+                <div>
+                    <p>
+                        For <span>Green Meals</span>
+                    </p>
+
+                    <LuLeafyGreen className='icon' />
+                </div>
+                <div>
+                    <p>
+                        For <span>Healthy Life</span>
+                    </p>
+
+                    <TbHealthRecognition className='icon' />
+                </div>
             </article>
 
             <article className='happy-users-container'>

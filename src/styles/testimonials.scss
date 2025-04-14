@@ -4,7 +4,7 @@
     text-align: center;
     padding: 5vh 0 15vh;
     h2 {
-        font-size: 3.5rem;
+        font-size: 3.75rem;
         font-weight: 700;
         color: rgb(25, 25, 25);
         position: relative;
@@ -60,12 +60,80 @@
             }
         }
     }
+    .additional-benefits-header {
+        font-family: 'Instrument Serif', serif;
+        font-family: "Lora", serif;
+        font-size: 2rem;
+        font-weight: 600;
+        font-style: italic;
+        //letter-spacing: 1.25px;
+        letter-spacing: -0.5px;
+        margin: 7.5rem 0 1rem;
+        text-align: left;
+    }
+    .additional-benefits-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        gap: 0.5rem;
+        div {
+            width: 25%;
+            background-color: rgb(255, 230, 200);
+            padding: 1rem 1rem 6rem;
+            border-radius: 8px;
+            position: relative;
+            user-select: none;
+            p {
+                font-size: 26px;
+                font-weight: 600;
+                color: rgb(30, 30, 30);
+                width: fit-content;
+                cursor: pointer;
+                span {
+                    color: rgb(255, 140, 0);
+                }
+            }
+            .icon {
+                font-size: 3.25rem;
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+                color: rgb(255, 140, 0);
+                cursor: pointer;
+            }
+            &:nth-of-type(2) {
+                background-color: rgb(193, 240, 255);
+                span,
+                .icon {
+                    color: rgb(0 133 176);
+                }
+            }
+            &:nth-of-type(3) {
+                background-color: rgb(200, 255, 200);
+                span,
+                .icon {
+                    color: rgb(0, 120, 0);
+                }
+            }
+            &:nth-of-type(4) {
+                background-color: rgb(255, 190, 190);
+                span,
+                .icon {
+                    color: rgb(191 65 65);
+                }
+            }
+        }
+    }
     .happy-users-container {
         margin: 10rem auto 0;
         h3 {
-            font-size: 3.25rem;
+            font-size: 3.5rem;
             font-weight: 600;
             color: rgb(25, 25, 25);
+        }
+        .subHeading {
+            font-size: 24px;
         }
         .cards-wrapper {
             margin-top: 2.5rem;
