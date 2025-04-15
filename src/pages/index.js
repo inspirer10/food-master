@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 import Testimonials from '@/Components/Testimonials';
 import FoodSaver from '@/Components/FoodSaver';
+import Footer from '@/Components/Footer';
+import FAQ from '@/Components/FAQ';
 
 export default function Home() {
     useEffect(() => {
@@ -40,8 +42,9 @@ export default function Home() {
             <FoodSaver />
 
             <h2 style={{ textAlign: 'center' }}>Team - people behind</h2>
-            <h2 style={{ textAlign: 'center' }}>FAQ</h2>
-            <h2 style={{ textAlign: 'center' }}>Footer</h2>
+
+            <FAQ />
+            <Footer />
         </>
     );
 }

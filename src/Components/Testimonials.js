@@ -106,7 +106,9 @@ function Testimonials() {
                 ))}
             </article>
 
-            <h3 className='additional-benefits-header'>Food Master...</h3>
+            <h3 className='additional-benefits-header'>
+                Food Master perfect...
+            </h3>
             <article className='additional-benefits-container'>
                 <div>
                     <p>

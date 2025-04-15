@@ -1,0 +1,64 @@
+.faq_section {
+    margin: 10vh auto 20vh;
+    width: 85%;
+    text-align: center;
+    h2 {
+        font-size: 3.75rem;
+        font-weight: 600;
+    }
+    .subHeading {
+        font-family: "SUSE", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        color: rgb(150, 150, 150);
+        margin-bottom: 2rem;
+    }
+    .faq-wrapper {
+        margin-bottom: -1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &:nth-of-type(2n + 2) {
+            align-items: flex-end;
+            .number {
+                margin-right: -.25rem;
+            }
+            .answer,
+            .question {
+                text-align: right;
+            }
+        }
+        .number {
+            font-family: "SUSE", sans-serif;
+            font-size: 5rem;
+            font-weight: 600;
+            color: rgb(227, 227, 227);
+            margin-left: -.25rem;
+            user-select: none;
+        }
+        .question {
+            color: rgb(35, 35, 35);
+            font-family: "Open Sans", sans-serif;
+            margin-top: -2.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            text-wrap: nowrap;
+            &::first-letter {
+                font-weight: 700;
+                font-family: "Lora", serif;
+            }
+        }
+        .answer {
+            font-size: 18px;
+            color: rgb(115, 115, 115);
+            line-height: 1.45;
+            text-align: left;
+            width: 37.5%;
+            text-wrap: balance;
+        }
+    }
+}
