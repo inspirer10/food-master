@@ -36,20 +36,23 @@
                 border-radius: 10px;
                 &:nth-of-type(1) {
                     z-index: 20;
-                    transform: translate(0%, 0%);
+                    transform: translate(0%, 0.25rem);
                     rotate: 0deg;
                 }
                 &:nth-of-type(2) {
                     z-index: 10;
-                    transform-origin: top left;
-                    transform: translate(-70%, -5%);
-                    rotate: 12deg;
+                    transform-origin: bottom left;
+                    transform: translate(-70%, -10%);
+                    rotate: 7deg;
                 }
                 &:nth-of-type(3) {
                     z-index: 5;
-                    transform-origin: top left;
-                    transform: translate(-135%, 25%);
-                    rotate: 24deg;
+                    transform-origin: bottom left;
+                    transform: translate(-145%, 10%);
+                    rotate: 22deg;
+                }
+                &:hover {
+                    z-index: 50;
                 }
             }
         }

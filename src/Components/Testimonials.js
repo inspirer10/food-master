@@ -88,8 +88,9 @@ function Testimonials() {
             userImage: 'james-taylor.jpg',
         }, */
     ];
+
     return (
-        <section className='testimonials_section'>
+        <section className='testimonials_section' id='whyUs'>
             <h2>Why Choose Food Master?</h2>
             <p className='subHeading'>
                 Benefits designed to provide a seamless, delicious, and

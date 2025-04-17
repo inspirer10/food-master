@@ -30,7 +30,7 @@ function FAQ() {
     ];
 
     return (
-        <section className='faq_section'>
+        <section className='faq_section' id='faq'>
             <h2>Any questions?</h2>
             <p className='subHeading'>
                 Understanding Food Master - Questions Our Users Commonly Ask

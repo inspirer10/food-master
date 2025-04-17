@@ -9,11 +9,17 @@ function Header() {
                     <BiSolidFoodMenu className='icon' /> Food Master
                 </p>
                 <div className='links-wrapper'>
-                    <a>Home</a>
-                    <a>Recipes</a>
-                    <a>Why Us?</a>
-                    <a>Favorites</a>
-                    <a>FAQ</a>
+                    <a
+                        onClick={() =>
+                            window.scrollTo({ top: 0, behavior: 'smooth' })
+                        }
+                    >
+                        Home
+                    </a>
+                    <a href='#recipesList'>Recipes</a>
+                    <a href='#whyUs'>Why Us?</a>
+                    <a href='/favoriteRecipes'>Favorites</a>
+                    <a href='#faq'>FAQ</a>
                 </div>
 
                 <div className='buttons-wrapper'>

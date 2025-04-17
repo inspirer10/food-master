@@ -1,13 +1,15 @@
+import { useEffect } from 'react';
+import Head from 'next/head';
+import Lenis from 'lenis';
+
 import Header from '@/Components/Header';
 import Introduction from '@/Components/Introduction';
 import RecipesList from '@/Components/RecipesList';
-import Head from 'next/head';
-import { useEffect } from 'react';
-import Lenis from 'lenis';
 import Testimonials from '@/Components/Testimonials';
 import FoodSaver from '@/Components/FoodSaver';
 import Footer from '@/Components/Footer';
 import FAQ from '@/Components/FAQ';
+import ExploreCuisineType from '@/Components/ExploreCuisineType';
 
 export default function Home() {
     useEffect(() => {
@@ -39,10 +41,11 @@ export default function Home() {
             <Introduction />
             <RecipesList />
             <Testimonials />
-            <FoodSaver />
+
+            <ExploreCuisineType />
 
             <h2 style={{ textAlign: 'center' }}>Team - people behind</h2>
-
+            <FoodSaver />
             <FAQ />
             <Footer />
         </>

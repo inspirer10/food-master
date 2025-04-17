@@ -23,21 +23,24 @@ function Introduction() {
                     <div className='images_wrapper'>
                         <Image
                             className='image'
-                            src='/green-tea-latte2.jpg'
+                            //src='/green-tea-latte2.jpg'
+                            src='/testimonials_person1.jpg'
                             alt='meal thumbnail'
                             width={500}
                             height={500}
                         />
                         <Image
                             className='image'
-                            src='/strawberry-smoothie2.jpg'
+                            // src='/testimonials_person1.jpg'
+                            src='/testimonials_person2.jpg'
                             alt='meal thumbnail'
                             width={250}
                             height={250}
                         />
                         <Image
                             className='image'
-                            src='/green-tea-latte2.jpg'
+                            // src='/green-tea-latte2.jpg'
+                            src='/testimonials_person3.jpg'
                             alt='meal thumbnail'
                             width={250}
                             height={250}
