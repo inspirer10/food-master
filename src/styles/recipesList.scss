@@ -26,7 +26,6 @@
             text-align: left;
             user-select: none;
             transition: .1s ease-in-out;
-            width: 250px;
             &:hover {
                 border-color: rgb(90, 90, 90);
                 .search-icon {
@@ -186,6 +185,7 @@
                 object-fit: contain;
                 //object-fit: cover;
                 //padding-bottom: 1rem;
+                cursor: pointer;
             }
             .categories-wrapper {
                 display: flex;

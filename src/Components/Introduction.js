@@ -24,7 +24,7 @@ function Introduction() {
                         <Image
                             className='image'
                             //src='/green-tea-latte2.jpg'
-                            src='/testimonials_person1.jpg'
+                            src='/polish.jpg'
                             alt='meal thumbnail'
                             width={500}
                             height={500}
@@ -32,7 +32,7 @@ function Introduction() {
                         <Image
                             className='image'
                             // src='/testimonials_person1.jpg'
-                            src='/testimonials_person2.jpg'
+                            src='/italian.jpg'
                             alt='meal thumbnail'
                             width={250}
                             height={250}
@@ -40,7 +40,7 @@ function Introduction() {
                         <Image
                             className='image'
                             // src='/green-tea-latte2.jpg'
-                            src='/testimonials_person3.jpg'
+                            src='/french.jpg'
                             alt='meal thumbnail'
                             width={250}
                             height={250}
@@ -74,10 +74,12 @@ function Introduction() {
                 </motion.p>
 
                 <button>
-                    Your Free Master Recipes
-                    <div className='arrow-wrapper'>
-                        <FaArrowRight className='arrow-icon' />
-                    </div>
+                    <a href='/recipesList'>
+                        Your Free Master Recipes
+                        <div className='arrow-wrapper'>
+                            <FaArrowRight className='arrow-icon' />
+                        </div>
+                    </a>
                 </button>
             </section>
 

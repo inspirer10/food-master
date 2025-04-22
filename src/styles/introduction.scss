@@ -26,14 +26,15 @@
             display: flex;
             position: absolute;
             top: 25%;
-            right: 1.25rem;
+            right: 0.5rem;
             transform: translate(0%, -50%);
             .image {
-                width: 87.5px;
-                height: 87.5px;
+                width: 90px;
+                height: 90px;
                 object-fit: cover;
                 border: 1px solid rgb(215, 215, 215);
                 border-radius: 10px;
+                transition: .1s ease-in-out;
                 &:nth-of-type(1) {
                     z-index: 20;
                     transform: translate(0%, 0.25rem);
@@ -42,19 +43,23 @@
                 &:nth-of-type(2) {
                     z-index: 10;
                     transform-origin: bottom left;
-                    transform: translate(-70%, -10%);
-                    rotate: 7deg;
+                    transform: translate(-67.5%, -12.5%);
+                    rotate: 8deg;
                 }
                 &:nth-of-type(3) {
                     z-index: 5;
                     transform-origin: bottom left;
-                    transform: translate(-145%, 10%);
-                    rotate: 22deg;
+                    transform: translate(-140%, 5%);
+                    rotate: 24deg;
                 }
                 &:hover {
                     z-index: 50;
                 }
             }
+        }
+        .images_wrapper:has(.image:hover) .image:not(:hover) {
+            filter: blur(2px);
+            opacity: 0.5;
         }
     }
     h2 {

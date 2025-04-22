@@ -28,6 +28,11 @@ function RecipeCard({
         }, 2500);
     };
 
+    const handleRecipeOpen = (e, link) => {
+        e.preventDefault();
+        alert(link);
+    };
+
     return (
         <div
             className='recipe_card'
@@ -39,6 +44,7 @@ function RecipeCard({
                 height={400}
                 width={400}
                 alt='recipe thumbnail'
+                onClick={(e) => handleRecipeOpen(e, {})}
             />
 
             <div className='favorite-wrapper' onClick={handleAddFavorite}>
@@ -54,7 +60,12 @@ function RecipeCard({
             </div>
 
             <div className='details-container'>
-                <p className='recipe-name'>{name}</p>
+                <p
+                    className='recipe-name'
+                    onClick={(e) => handleRecipeOpen(e, {})}
+                >
+                    {name}
+                </p>
 
                 <div className='details-wrapper'>
                     <p className='calories'>
