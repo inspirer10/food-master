@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { BiSolidFoodMenu, BiFoodTag } from 'react-icons/bi';
@@ -64,7 +65,7 @@ function Header() {
                     >
                         Why Us?
                     </a>
-                    <a href='/favoriteRecipes'>Favorites</a>
+                    <Link href='/favoriteRecipes'>Favorites</Link>
                     <a
                         href='#faq'
                         onClick={(e) => handleSectionRouting(e, 'faq')}

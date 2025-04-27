@@ -4,6 +4,7 @@ import { FaArrowRight } from 'react-icons/fa6';
 import { IoRestaurant } from 'react-icons/io5';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Introduction() {
     return (
@@ -74,12 +75,12 @@ function Introduction() {
                 </motion.p>
 
                 <button>
-                    <a href='/recipesList'>
+                    <Link href='/recipesList'>
                         Your Free Master Recipes
                         <div className='arrow-wrapper'>
                             <FaArrowRight className='arrow-icon' />
                         </div>
-                    </a>
+                    </Link>
                 </button>
             </section>
 

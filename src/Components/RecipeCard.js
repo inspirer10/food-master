@@ -4,8 +4,10 @@ import { MdAccessTime } from 'react-icons/md';
 import { IoFlameSharp } from 'react-icons/io5';
 import { FaRegHeart } from 'react-icons/fa';
 import { ImCheckmark } from 'react-icons/im';
+import Link from 'next/link';
 
 function RecipeCard({
+    id,
     name,
     image,
     type,
@@ -60,12 +62,13 @@ function RecipeCard({
             </div>
 
             <div className='details-container'>
-                <p
+                <Link
+                    href={`/recipe/${name}`}
                     className='recipe-name'
-                    onClick={(e) => handleRecipeOpen(e, {})}
+                    //onClick={(e) => handleRecipeOpen(e, {})}
                 >
                     {name}
-                </p>
+                </Link>
 
                 <div className='details-wrapper'>
                     <p className='calories'>

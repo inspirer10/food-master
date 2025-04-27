@@ -4,21 +4,23 @@ import Footer from '@/Components/Footer';
 import AllRecipesList from '@/Components/AllRecipesList';
 import Head from 'next/head';
 
-function recipesList() {
+function allRecipes() {
     return (
         <>
             <Head>
                 <title>Lista przepisów | Food Master</title>
                 <meta
                     name='description'
-                    content='Przeglądaj nasze ulubione przepisy'
+                    content='Przeglądaj wszystkie nasze przepisy'
                 />
             </Head>
             <Header />
+            <h1>ALL RECIPES</h1> <h1>ALL RECIPES</h1> <h1>ALL RECIPES</h1>
+            <h1>ALL RECIPES</h1> <h1>ALL RECIPES</h1> <h1>ALL RECIPES</h1>
             <AllRecipesList />
             <Footer />
         </>
     );
 }
 
-export default recipesList;
+export default allRecipes;

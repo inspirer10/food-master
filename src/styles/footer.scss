@@ -24,7 +24,12 @@ footer {
                 letter-spacing: 0.25px;
                 padding: 2px 0;
                 margin: 3px 0;
-                color: rgb(120, 120, 120);
+                color: rgb(125, 125, 125);
+                width: fit-content;
+                transition: .15s ease-in-out;
+                &:hover {
+                    color: rgb(50, 50, 50);
+                }
             }
             .icons-wrapper {
                 display: flex;
@@ -35,6 +40,7 @@ footer {
                     font-size: 22px;
                     transition: .15s ease-in-out;
                     &:hover {
+                        color: rgb(35, 35, 35);
                         transform: scale(1.15);
                     }
                 }

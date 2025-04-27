@@ -224,6 +224,7 @@
             .details-container {
                 z-index: 10;
                 .recipe-name {
+                    display: flex;
                     font-size: 17px;
                     font-weight: 600;
                     letter-spacing: -0.4px;
