@@ -1,15 +1,15 @@
-import Footer from '@/Components/Footer';
-import Header from '@/Components/Header';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import React from 'react';
+import Header from '@/Components/Header';
+import Footer from '@/Components/Footer';
+import SingleRecipe from '@/Components/SingleRecipe';
 
+import { useRouter } from 'next/router';
 import { recipesData } from '/data/recipesData.js';
 
 function RecipeDetails() {
     const router = useRouter();
-
-    // Dodaj warunek na brak ID podczas pierwszego renderowania
+    // Dodaj warunek na brak ID(name) podczas pierwszego renderowania
     /*  if (router.isFallback || !router.query.name) {
         return (
             <>
@@ -21,17 +21,22 @@ function RecipeDetails() {
             </>
         );
     } */
-
     const { name } = router.query;
-
     // Znajdź przepis o podanym ID
     const decodedName = decodeURIComponent(name);
     const recipe = recipesData.find((recipe) => recipe.name === decodedName);
 
+    //const {type, kcal, proteins, carbons, fats, ingredients, difficulty, tags} = recipe;
+
+    /*const [recipeData, setRecipeData] = useState(null);
+    useEffect(() => {
+        //setRecipeData(recipe);
+    }, []); */
+
     return (
         <>
             <Head>
-                <title>{name} | Food Master</title>
+                <title>{name ? `${name} | Food Master}` : 'Food Master'}</title>
                 <meta
                     name='description'
                     content='Przeglądaj wszystkie nasze przepisy'
@@ -39,8 +44,21 @@ function RecipeDetails() {
             </Head>
             <Header />
             <br /> <br /> <br /> <br />
-            <h1>recipe[{name}]</h1> <br /> <br />
-            <p>recipe[{recipe.instructions}]</p>
+            <h1>recipe - {name}</h1> <br /> <br />
+            <p>recipe - {recipe ? recipe.difficulty : ' '}</p>
+            {recipe ? (
+                <SingleRecipe
+                    name={name}
+                    type={recipe.type}
+                    kcal={recipe.kcal}
+                    proteins={recipe.proteins}
+                    carbons={recipe.carbons}
+                    fats={recipe.fats}
+                    ingredients={recipe.ingredients}
+                    difficulty={recipe.difficulty}
+                    tags={recipe.tags}
+                />
+            ) : null}
             <Footer />
         </>
     );
