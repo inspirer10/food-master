@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Header from '@/Components/Header';
 import Footer from '@/Components/Footer';
-import SingleRecipe from '@/Components/SingleRecipe';
+import SingleRecipeDetails from '@/Components/SingleRecipeDetails';
 
 import { useRouter } from 'next/router';
 import { recipesData } from '/data/recipesData.js';
@@ -43,13 +43,12 @@ function RecipeDetails() {
                 />
             </Head>
             <Header />
-            <br /> <br /> <br /> <br />
-            <h1>recipe - {name}</h1> <br /> <br />
-            <p>recipe - {recipe ? recipe.difficulty : ' '}</p>
             {recipe ? (
-                <SingleRecipe
+                <SingleRecipeDetails
                     name={name}
+                    image={recipe.image}
                     type={recipe.type}
+                    time={recipe.time}
                     kcal={recipe.kcal}
                     proteins={recipe.proteins}
                     carbons={recipe.carbons}
@@ -57,6 +56,7 @@ function RecipeDetails() {
                     ingredients={recipe.ingredients}
                     difficulty={recipe.difficulty}
                     tags={recipe.tags}
+                    instructions={recipe.instructions}
                 />
             ) : null}
             <Footer />

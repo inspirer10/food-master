@@ -30,24 +30,20 @@ function RecipeCard({
         }, 2500);
     };
 
-    const handleRecipeOpen = (e, link) => {
-        e.preventDefault();
-        alert(link);
-    };
-
     return (
         <div
             className='recipe_card'
             //style={{ backgroundImage: `url(${image})` }}
         >
-            <Image
-                className='recipe-thumbnail'
-                src={image}
-                height={400}
-                width={400}
-                alt='recipe thumbnail'
-                onClick={(e) => handleRecipeOpen(e, {})}
-            />
+            <Link href={`/recipe/${name}`} style={{ display: 'contents' }}>
+                <Image
+                    className='recipe-thumbnail'
+                    src={image}
+                    height={400}
+                    width={400}
+                    alt='recipe thumbnail'
+                />
+            </Link>
 
             <div className='favorite-wrapper' onClick={handleAddFavorite}>
                 <FaRegHeart className='fav-icon' />
@@ -62,11 +58,7 @@ function RecipeCard({
             </div>
 
             <div className='details-container'>
-                <Link
-                    href={`/recipe/${name}`}
-                    className='recipe-name'
-                    //onClick={(e) => handleRecipeOpen(e, {})}
-                >
+                <Link href={`/recipe/${name}`} className='recipe-name'>
                     {name}
                 </Link>
 
