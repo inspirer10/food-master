@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from '@/Components/Header';
 import Footer from '@/Components/Footer';
 import SingleRecipeDetails from '@/Components/SingleRecipeDetails';
+import RecommendedRecipes from '@/Components/RecommendedRecipes';
 
 import { useRouter } from 'next/router';
 import { recipesData } from '/data/recipesData.js';
@@ -47,18 +48,23 @@ function RecipeDetails() {
                 <SingleRecipeDetails
                     name={name}
                     image={recipe.image}
+                    //^^ thumbnail={recipe.thumbnail}
+                    mainImage={recipe.mainImage}
                     type={recipe.type}
                     time={recipe.time}
                     kcal={recipe.kcal}
                     proteins={recipe.proteins}
                     carbons={recipe.carbons}
                     fats={recipe.fats}
+                    servings={recipe.servings}
                     ingredients={recipe.ingredients}
                     difficulty={recipe.difficulty}
                     tags={recipe.tags}
                     instructions={recipe.instructions}
                 />
             ) : null}
+
+            <RecommendedRecipes />
             <Footer />
         </>
     );

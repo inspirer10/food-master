@@ -15,8 +15,6 @@ function allRecipes() {
                 />
             </Head>
             <Header />
-            <h1>ALL RECIPES</h1> <h1>ALL RECIPES</h1> <h1>ALL RECIPES</h1>
-            <h1>ALL RECIPES</h1> <h1>ALL RECIPES</h1> <h1>ALL RECIPES</h1>
             <AllRecipesList />
             <Footer />
         </>

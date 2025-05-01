@@ -11,16 +11,18 @@
             //border: 1px solid red;
             width: 60%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             .image-wrapper {
-                // border: 1px solid red;
+                border: 1px solid red;
                 // background-color: gray;
                 border-radius: 12px;
+                height: 50vh;
                 img {
-                    width: 80%;
-                    height: 80%;
+                    width: 100%;
+                    height: 100%;
                     object-fit: cover;
                     overflow: visible;
+                    object-position: center;
                     //border: 1px solid red;
                 }
             }
@@ -48,13 +50,13 @@
                 }
             }
             .recipe-name {
-                font-family: 'SUSE', sans-serif;
                 font-family: 'Lora', serif;
                 font-size: 2.75rem;
                 font-weight: 700;
                 letter-spacing: -0.5px;
                 line-height: 1.15;
                 margin: 0 0 0.5rem;
+                text-wrap: nowrap;
             }
             .basic-info_wrapper {
                 display: flex;
@@ -67,6 +69,9 @@
                     padding: 5px 8px;
                     font-size: 15px;
                     color: rgb(50, 50, 50);
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
                     letter-spacing: -0.25px;
                     transition: 0.15s ease-in-out;
                     cursor: pointer;
@@ -76,10 +81,25 @@
                     }
                 }
             }
+            .detailed-info_wrapper {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1rem;
+                p {
+                    font-family: 'SUSE', sans-serif;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 1.22;
+                    span {
+                        font-weight: 400;
+                        color: rgb(150, 150, 150);
+                    }
+                }
+            }
             .ingredients-heading {
-                margin-top: 1.75rem;
-                margin-bottom: 0.25rem;
                 font-family: 'SUSE', sans-serif;
+                margin-top: 1rem;
+                margin-bottom: 0.25rem;
                 font-size: 22px;
                 font-weight: 600;
                 letter-spacing: -0.5px;
@@ -139,5 +159,76 @@
         flex-direction: column;
         align-items: flex-start;
         text-align: justify;
+        width: 90%;
+        .preparation_heading {
+            font-family: 'Lora', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0 auto 0rem;
+        }
+        .subHeading {
+            font-size: 20px;
+            font-weight: 400;
+            color: rgb(155, 155, 155);
+            margin: 0 auto 3rem;
+            letter-spacing: -0.75px;
+            text-align: center;
+        }
+        .steps-wrapper {
+            .step {
+                font-family: 'SUSE', sans-serif;
+                font-size: 24px;
+                font-weight: 500;
+                color: rgb(35, 35, 35);
+                margin: 3px 0;
+                padding: 1px 0;
+                width: fit-content;
+                letter-spacing: -0.25px;
+                gap: 0.75rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: 0.175s ease-in-out;
+                span {
+                    letter-spacing: -0.75px;
+                    color: rgb(185, 185, 185);
+                    user-select: none;
+                }
+                &.done {
+                    // color: rgb(75, 75, 75);
+                    opacity: 0.5;
+                }
+                .icon {
+                    font-size: 22px;
+                    opacity: 0;
+                    color: rgb(0, 100, 0);
+                    transition: 0.125s ease-in-out;
+                    &.done {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.recommendedRecipes_section {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+        font-family: 'Lora', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0 auto 0rem;
+    }
+    .subHeading {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(155, 155, 155);
+        margin: 0 auto 3rem;
+        letter-spacing: -0.75px;
+        text-align: center;
     }
 }

@@ -5,8 +5,17 @@ import RecipeCard from './RecipeCard';
 import { recipesData } from '/data/recipesData.js';
 
 function AllRecipesList() {
+    const categoriesData = [
+        { name: 'All' },
+        { name: 'Breakfast' },
+        { name: 'Dinner' },
+        { name: 'Lunch' },
+        { name: 'Snack' },
+        { name: 'Drink' },
+    ];
     const [filteredRecipes, setFilteredRecipes] = useState(recipesData);
     const [searchValue, setSearchValue] = useState('');
+    const [previousSearchedCat, setPreviousSearchedCat] = useState('All');
 
     const handleInputChange = (e) => {
         const newSearchValue = e.target.value;
@@ -17,7 +26,23 @@ function AllRecipesList() {
         );
 
         setFilteredRecipes(filteredResults);
+        setPreviousSearchedCat('All');
     };
+
+    const handleCategoryChoice = (categoryName) => {
+        const filteredRecipes = recipesData.filter((item) =>
+            item.type.includes(categoryName)
+        );
+
+        if (categoryName === previousSearchedCat || categoryName === 'All') {
+            setFilteredRecipes(recipesData);
+            setPreviousSearchedCat('All');
+        } else {
+            setFilteredRecipes(filteredRecipes);
+            setPreviousSearchedCat(categoryName);
+        }
+    };
+
     return (
         <section className='recipes-list_section'>
             <div className='heading-wrapper'>
@@ -45,6 +70,21 @@ function AllRecipesList() {
                     </datalist>
                 </label>
             </div>
+
+            <div className='filteredCategories-wrapper'>
+                {categoriesData.map(({ name }, index) => (
+                    <p
+                        key={index}
+                        onClick={() => handleCategoryChoice(`${name}`)}
+                        className={
+                            previousSearchedCat === name ? 'active' : null
+                        }
+                    >
+                        #{name}
+                    </p>
+                ))}
+            </div>
+
             <article className='recipes-container'>
                 {filteredRecipes.length === 0 && (
                     <p className='empty-state'>No recipe found...</p>
