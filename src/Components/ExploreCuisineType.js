@@ -14,36 +14,28 @@ function ExploreCuisineType() {
                     style={{ backgroundImage: 'url(/italian.jpg)' }}
                     className='cusisineType-thumbnail'
                 >
-                    <div className='image-overlay'>
-                        <p>Italian </p>
-                    </div>
+                    <p>Italian</p>
                 </div>
 
                 <div
                     style={{ backgroundImage: 'url(/german.jpg)' }}
                     className='cusisineType-thumbnail'
                 >
-                    <div className='image-overlay'>
-                        <p>German </p>
-                    </div>
+                    <p>German</p>
                 </div>
 
                 <div
                     style={{ backgroundImage: 'url(/polish.jpg)' }}
                     className='cusisineType-thumbnail'
                 >
-                    <div className='image-overlay'>
-                        <p>Polish </p>
-                    </div>
+                    <p>Polish</p>
                 </div>
 
                 <div
                     style={{ backgroundImage: 'url(/french.jpg)' }}
                     className='cusisineType-thumbnail'
                 >
-                    <div className='image-overlay'>
-                        <p> French</p>
-                    </div>
+                    <p>French</p>
                 </div>
             </article>
         </section>

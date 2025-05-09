@@ -38,10 +38,7 @@ export default function Home() {
             <Introduction />
             <RecipesList />
             <Testimonials />
-
             <ExploreCuisineType />
-
-            <h2 style={{ textAlign: 'center' }}>Team - people behind</h2>
             <FoodSaver />
             <FAQ />
             <Footer />

@@ -42,17 +42,12 @@ function Header() {
     return (
         <header className={isVisible ? 'visible' : 'hidden'}>
             <nav>
-                <p className='name' onClick={() => router.push('/')}>
+                <Link className='name' href='/'>
                     <BiSolidFoodMenu className='icon' /> Food Master
-                </p>
+                </Link>
                 <div className='links-wrapper'>
-                    <a
-                        onClick={() =>
-                            window.scrollTo({ top: 0, behavior: 'smooth' })
-                        }
-                    >
-                        Home
-                    </a>
+                    <Link href='/'>Home</Link>
+
                     <a
                         href='#recipesList'
                         onClick={(e) => handleSectionRouting(e, 'recipesList')}
@@ -76,7 +71,7 @@ function Header() {
 
                 <div className='buttons-wrapper'>
                     <button className='contact-btn'>Get in Touch</button>
-                    <button className='-btn'>Get Started</button>
+                    <button className='started-btn'>Get Started</button>
                 </div>
             </nav>
         </header>

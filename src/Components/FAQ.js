@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 function FAQ() {
     const faqData = [
@@ -29,19 +30,57 @@ function FAQ() {
         },
     ];
 
+    const fadeInUp = {
+        hidden: {
+            opacity: 0,
+            y: 20,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+        },
+    };
+
     return (
         <section className='faq_section' id='faq'>
-            <h2>Any questions?</h2>
-            <p className='subHeading'>
+            <motion.h2
+                variants={fadeInUp}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
+                Any questions?
+            </motion.h2>
+            <motion.p
+                className='subHeading'
+                variants={fadeInUp}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+            >
                 Understanding Food Master - Questions Our Users Commonly Ask
-            </p>
+            </motion.p>
 
-            {faqData.map(({ id, question, answer }) => (
-                <div className='faq-wrapper' key={id}>
+            {faqData.map(({ id, question, answer }, index) => (
+                <motion.div
+                    className='faq-wrapper'
+                    key={id}
+                    variants={fadeInUp}
+                    initial='hidden'
+                    whileInView='visible'
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{
+                        duration: 0.6,
+                        delay: 0.4 + index * 0.125,
+                        ease: 'easeOut',
+                    }}
+                >
                     <h5 className='number'>{id}</h5>
                     <h6 className='question'>{question}</h6>
                     <p className='answer'>{answer}</p>
-                </div>
+                </motion.div>
             ))}
         </section>
     );

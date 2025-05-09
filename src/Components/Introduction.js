@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { backIn, motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa6';
 import { IoRestaurant } from 'react-icons/io5';
 
@@ -7,15 +7,51 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 function Introduction() {
+    const fadeInUp = {
+        hidden: {
+            opacity: 0,
+            y: 20,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+        },
+    };
+
+    const statsData = [
+        {
+            number: '700+',
+            numberType: 'Recipes',
+            description: 'Diverse dishes for every taste and occasion',
+        },
+        {
+            number: '100 000+',
+            numberType: 'Users',
+            description: 'Trusted by home cooks everywhere',
+        },
+        {
+            number: '5',
+            numberType: 'Categories',
+            description: 'Breakfast, lunch, dinner, snacks & drinks',
+        },
+        {
+            number: '4.88',
+            highlighted: true,
+            numberType: 'Stars',
+            description: 'Average rating from satisfied users',
+        },
+    ];
+
     return (
         <>
             <section className='introduction_section'>
                 <motion.div
                     className='preHeading'
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.75, ease: 'easeInOut' }}
-                    viewport={{ once: true }}
+                    variants={fadeInUp}
+                    initial='hidden'
+                    whileInView='visible'
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                    viewport={{ once: true, margin: '-50px' }}
                 >
                     <p>
                         Explore great meals just for you <IoRestaurant />
@@ -50,10 +86,11 @@ function Introduction() {
                 </motion.div>
 
                 <motion.h2
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1.25, ease: 'easeInOut' }}
-                    viewport={{ once: true }}
+                    variants={fadeInUp}
+                    initial='hidden'
+                    whileInView='visible'
+                    transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+                    viewport={{ once: true, margin: '-50px' }}
                 >
                     Find <span className='colored-span'>perfect recipes</span>{' '}
                     for
@@ -66,59 +103,93 @@ function Introduction() {
 
                 <motion.p
                     className='subHeading'
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1.5, ease: 'easeInOut' }}
-                    viewport={{ once: true }}
+                    variants={fadeInUp}
+                    initial='hidden'
+                    whileInView='visible'
+                    transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+                    viewport={{ once: true, margin: '-50px' }}
                 >
                     Simplifying healthy eating with delicious meal ideas
                 </motion.p>
 
-                <button>
-                    <Link href='/recipesList'>
+                <motion.button
+                    variants={fadeInUp}
+                    initial='hidden'
+                    whileInView='visible'
+                    transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }}
+                    viewport={{ once: true, margin: '-50px' }}
+                    whileHover={{
+                        color: '#003200',
+                        backgroundColor: '#90ee90',
+                        transition: {
+                            duration: 0.2,
+                            ease: 'easeInOut',
+                        },
+                    }}
+                    animate={{
+                        color: '#FFF',
+                        backgroundColor: 'rgb(0, 60, 0)',
+                        transition: { duration: 0.2, ease: 'easeInOut' },
+                    }}
+                >
+                    <Link href='/allRecipes'>
                         Your Free Master Recipes
-                        <div className='arrow-wrapper'>
+                        <motiondiv className='arrow-wrapper'>
                             <FaArrowRight className='arrow-icon' />
-                        </div>
+                        </motiondiv>
                     </Link>
-                </button>
+                </motion.button>
             </section>
 
             <article className='app-stats-container'>
-                <div className='stat-wrapper'>
-                    <h2>
-                        700+
-                        <br />
-                        Recipes
-                    </h2>
-                    <p>Diverse dishes for every taste and occasion</p>
-                </div>
-
-                <div className='stat-wrapper'>
-                    <h2>
-                        100 000+
-                        <br />
-                        Users
-                    </h2>
-                    <p>Trusted by home cooks everywhere</p>
-                </div>
-
-                <div className='stat-wrapper'>
-                    <h2>
-                        5<br />
-                        Categories
-                    </h2>
-                    <p>Breakfast, lunch, dinner, snacks & drinks</p>
-                </div>
-
-                <div className='stat-wrapper'>
-                    <h2>
-                        <span>4.88</span>
-                        <br />
-                        Stars
-                    </h2>
-                    <p>Average rating from satisfied users</p>
-                </div>
+                {statsData.map(
+                    (
+                        { number, numberType, description, highlighted },
+                        index
+                    ) => (
+                        <motion.div
+                            key={index}
+                            className='stat-wrapper'
+                            variants={fadeInUp}
+                            initial='hidden'
+                            whileInView='visible'
+                            transition={{
+                                duration: 0.6,
+                                delay: 0.8 + index * 0.2,
+                                ease: 'easeOut',
+                            }}
+                            viewport={{ once: true, margin: '-50px' }}
+                        >
+                            <motion.h2
+                                variants={fadeInUp}
+                                initial='hidden'
+                                whileInView='visible'
+                                viewport={{ once: true }}
+                                transition={{
+                                    duration: 0.6,
+                                    delay: 0.9 + index * 0.2,
+                                    ease: 'easeOut',
+                                }}
+                            >
+                                {highlighted ? <span>{number}</span> : number}
+                                <br /> {numberType}
+                            </motion.h2>
+                            <motion.p
+                                variants={fadeInUp}
+                                initial='hidden'
+                                whileInView='visible'
+                                viewport={{ once: true }}
+                                transition={{
+                                    duration: 0.6,
+                                    delay: 1.0 + index * 0.2,
+                                    ease: 'easeOut',
+                                }}
+                            >
+                                {description}
+                            </motion.p>
+                        </motion.div>
+                    )
+                )}
             </article>
         </>
     );

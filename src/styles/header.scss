@@ -35,6 +35,24 @@ header {
         gap: 0.25rem;
         width: 33.333%;
         cursor: pointer;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 33.333%;
+            height: 2px;
+            //background-color: rgb(0, 60, 0);
+            background-color: lightgreen;
+            bottom: -2px;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.25s ease-in-out;
+        }
+        &:hover {
+            &::after {
+                transform: scaleX(1);
+            }
+        }
         .icon {
             display: flex;
             align-items: center;
@@ -60,9 +78,9 @@ header {
             padding: 0.5rem 1rem;
             cursor: pointer;
             border-radius: 8px;
-            transition: .15s ease-in-out;
             letter-spacing: -0.25px;
             text-transform: uppercase;
+            transition: .3s ease;
             &:hover {
                 color: #000;
                 background-color: lightgreen;
@@ -79,7 +97,7 @@ header {
             outline: none;
             padding: 10px 1.5rem;
             cursor: pointer;
-            transition: .15s ease-in-out;
+            transition: .325s ease;
         }
         .contact-btn {
             color: #000;
@@ -90,7 +108,7 @@ header {
                 background-color: rgb(200, 200, 200);
             }
         }
-        .-btn {
+        .started-btn {
             background-color: rgb(25, 25, 25);
             color: #FFF;
             border: 1px solid rgb(25, 25, 25);

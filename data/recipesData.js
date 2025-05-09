@@ -146,7 +146,7 @@ export const recipesData = [
     {
         id: 6,
         name: 'Strawberry Banana Smoothie',
-        image: '/strawberry-smoothie2.jpg',
+        image: '/strawberry-smoothie.jpg',
         type: 'Drink',
         time: 5,
         kcal: 200,
@@ -739,7 +739,7 @@ export const recipesData = [
     {
         id: 24,
         name: 'Pineapple Coconut Smoothie',
-        image: '/pineapple-smoothie.jpg',
+        image: '/pineapple-smoothie2.jpg',
         type: 'Drink',
         time: 5,
         kcal: 240,

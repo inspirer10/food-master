@@ -28,6 +28,12 @@ function RecipesList() {
 
     return (
         <section className='recipes-list_section' id='recipesList'>
+            <h2 className='heading'>Food Master</h2>
+            <p className='subHeading'>
+                Cook Like a Pro with Our <span>Easy</span> and{' '}
+                <span>Tasty</span> Recipes
+            </p>
+
             <div className='heading-wrapper'>
                 <h2>
                     <FiGrid className='icon' /> Recipes popular today

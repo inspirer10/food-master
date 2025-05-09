@@ -3,13 +3,12 @@ import { BsClockHistory, BsTransparency } from 'react-icons/bs';
 import { MdOutlineFiberSmartRecord } from 'react-icons/md';
 import { GrMoney } from 'react-icons/gr';
 import { FaQuoteLeft } from 'react-icons/fa';
-import Image from 'next/image';
-
-import { FaWeightScale } from 'react-icons/fa6';
 import { GiWeightLiftingUp } from 'react-icons/gi';
 import { LuLeafyGreen } from 'react-icons/lu';
 import { TbHealthRecognition } from 'react-icons/tb';
 import { FaBowlFood } from 'react-icons/fa6';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 function Testimonials() {
     const benefitsData = [
@@ -49,7 +48,7 @@ function Testimonials() {
             quote: 'Food Master transformed how I cook at home. The detailed nutritional information helps me maintain a balanced diet while enjoying delicious meals.',
             name: 'Emma',
             country: 'United States',
-            image: '/testimonials_person2.jpg',
+            image: '/testimonials_person3.jpg',
         },
         {
             id: 2,
@@ -63,7 +62,7 @@ function Testimonials() {
             quote: 'The budget-friendly meal plans helped me reduce my grocery spending by 30% while still eating varied and nutritious meals. Incredible value!',
             name: 'Sophia',
             country: 'Canada',
-            image: '/testimonials_person3.jpg',
+            image: '/testimonials_person4.jpg',
         },
         /*
         {
@@ -89,67 +88,179 @@ function Testimonials() {
         }, */
     ];
 
+    const fadeInUp = {
+        hidden: {
+            opacity: 0,
+            y: 20,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+        },
+    };
     return (
         <section className='testimonials_section' id='whyUs'>
-            <h2>Why Choose Food Master?</h2>
-            <p className='subHeading'>
+            <motion.h2
+                variants={fadeInUp}
+                initial='hidden'
+                whileInView='visible'
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                viewport={{ once: true, margin: '-50px' }}
+            >
+                Why Choose Food Master?
+            </motion.h2>
+            <motion.p
+                className='subHeading'
+                variants={fadeInUp}
+                initial='hidden'
+                whileInView='visible'
+                transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+                viewport={{ once: true, margin: '-50px' }}
+            >
                 Benefits designed to provide a seamless, delicious, and
                 accessible cooking experience for all users
-            </p>
+            </motion.p>
 
             <article className='benefits-container'>
-                {benefitsData.map(({ id, title, description, icon }) => (
-                    <div className='card' key={id}>
+                {benefitsData.map(({ id, title, description, icon }, index) => (
+                    <motion.div
+                        className='card'
+                        key={id}
+                        variants={fadeInUp}
+                        initial='hidden'
+                        whileInView='visible'
+                        transition={{
+                            duration: 0.6,
+                            delay: 0.4 + index * 0.2,
+                            ease: 'easeOut',
+                        }}
+                        viewport={{ once: true, margin: '-50px' }}
+                    >
                         <span>{icon}</span>
                         <h5>{title}</h5>
                         <p className='text'>{description}</p>
-                    </div>
+                    </motion.div>
                 ))}
             </article>
 
-            <h3 className='additional-benefits-header'>
+            <motion.h3
+                className='additional-benefits-header'
+                variants={fadeInUp}
+                initial='hidden'
+                whileInView='visible'
+                transition={{ duration: 0.6, delay: 1.1, ease: 'easeOut' }}
+                viewport={{ once: true, margin: '-50px' }}
+            >
                 Food Master perfect...
-            </h3>
+            </motion.h3>
             <article className='additional-benefits-container'>
-                <div>
+                <motion.div
+                    variants={fadeInUp}
+                    initial='hidden'
+                    whileInView='visible'
+                    transition={{
+                        duration: 0.6,
+                        delay: 0.9,
+                        ease: 'easeOut',
+                    }}
+                    viewport={{ once: true, margin: '-50px' }}
+                >
                     <p>
                         For <span>Weight Loss</span>
                     </p>
                     <GiWeightLiftingUp className='icon' />
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    variants={fadeInUp}
+                    initial='hidden'
+                    whileInView='visible'
+                    transition={{
+                        duration: 0.6,
+                        delay: 1,
+                        ease: 'easeOut',
+                    }}
+                    viewport={{ once: true, margin: '-50px' }}
+                >
                     <p>
                         For <span>Better Diet</span>
                     </p>
 
                     <FaBowlFood className='icon' />
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    variants={fadeInUp}
+                    initial='hidden'
+                    whileInView='visible'
+                    transition={{
+                        duration: 0.6,
+                        delay: 1.1,
+                        ease: 'easeOut',
+                    }}
+                    viewport={{ once: true, margin: '-50px' }}
+                >
                     <p>
                         For <span>Green Meals</span>
                     </p>
 
                     <LuLeafyGreen className='icon' />
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                    variants={fadeInUp}
+                    initial='hidden'
+                    whileInView='visible'
+                    transition={{
+                        duration: 0.6,
+                        delay: 1.2,
+                        ease: 'easeOut',
+                    }}
+                    viewport={{ once: true, margin: '-50px' }}
+                >
                     <p>
                         For <span>Healthy Life</span>
                     </p>
 
                     <TbHealthRecognition className='icon' />
-                </div>
+                </motion.div>
             </article>
 
             <article className='happy-users-container'>
-                <h3>See what users think about us!</h3>
-                <p className='subHeading'>
+                <motion.h3
+                    variants={fadeInUp}
+                    initial='hidden'
+                    whileInView='visible'
+                    transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+                    viewport={{ once: true, margin: '-50px' }}
+                >
+                    See what users think about us!
+                </motion.h3>
+
+                <motion.p
+                    className='subHeading'
+                    variants={fadeInUp}
+                    initial='hidden'
+                    whileInView='visible'
+                    transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+                    viewport={{ once: true, margin: '-50px' }}
+                >
                     Clients experience from all around the globe
-                </p>
+                </motion.p>
 
                 <div className='cards-wrapper'>
                     {usersTestimonials.map(
-                        ({ id, quote, name, country, image }) => (
-                            <div className='card' key={id}>
+                        ({ id, quote, name, country, image }, index) => (
+                            <motion.div
+                                className='card'
+                                key={id}
+                                variants={fadeInUp}
+                                initial='hidden'
+                                whileInView='visible'
+                                transition={{
+                                    duration: 0.6,
+                                    delay: 0.2 + index * 0.15,
+                                    ease: 'easeOut',
+                                }}
+                                viewport={{ once: true, margin: '-50px' }}
+                            >
                                 <Image
                                     className='image'
                                     src={image}
@@ -165,7 +276,7 @@ function Testimonials() {
                                         &mdash; {name}, {country}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     )}
                 </div>
