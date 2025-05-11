@@ -79,7 +79,8 @@ function RecipesList() {
                     ({
                         id,
                         name,
-                        image,
+                        thumbnail,
+                        image2,
                         type,
                         time,
                         kcal,
@@ -91,7 +92,8 @@ function RecipesList() {
                             key={id}
                             id={id}
                             name={name}
-                            image={image}
+                            thumbnail={thumbnail}
+                            image2={image2}
                             type={type}
                             time={time}
                             kcal={kcal}

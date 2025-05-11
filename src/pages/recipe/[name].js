@@ -47,9 +47,8 @@ function RecipeDetails() {
             {recipe ? (
                 <SingleRecipeDetails
                     name={name}
-                    image={recipe.image}
-                    //^^ thumbnail={recipe.thumbnail}
-                    mainImage={recipe.mainImage}
+                    thumbnail={recipe.thumbnail}
+                    image2={recipe.image2}
                     type={recipe.type}
                     time={recipe.time}
                     kcal={recipe.kcal}

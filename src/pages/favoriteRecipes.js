@@ -1,3 +1,4 @@
+import FavoritesRecipesList from '@/Components/FavoritesRecipesList';
 import Footer from '@/Components/Footer';
 import Header from '@/Components/Header';
 import Head from 'next/head';
@@ -14,6 +15,7 @@ function favoriteRecipes() {
                 />
             </Head>
             <Header />
+            <FavoritesRecipesList />
             <Footer />
         </>
     );

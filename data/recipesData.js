@@ -3,7 +3,8 @@ export const recipesData = [
     {
         id: 1,
         name: 'Scrambled Eggs and Bacon',
-        image: '/eggs-and-bacon.jpg',
+        thumbnail: '/eggs-and-bacon2.jpg',
+        image2: '/eggs-and-bacon.jpg',
         type: 'Breakfast',
         time: 15,
         kcal: 450,
@@ -30,7 +31,8 @@ export const recipesData = [
     {
         id: 2,
         name: 'Avocado Toast',
-        image: '/avocado-toast2.jpg',
+        thumbnail: '/avocado-toast2.jpg',
+        image2: '/avocado-toast.jpg',
         type: 'Breakfast',
         time: 10,
         kcal: 320,
@@ -59,7 +61,8 @@ export const recipesData = [
     {
         id: 3,
         name: 'Greek Yogurt with Berries',
-        image: '/greek-yogurt.jpg',
+        thumbnail: '/greek-yogurt.jpg',
+        image2: '/greek-yogurt2.jpg',
         type: 'Snack',
         time: 5,
         kcal: 180,
@@ -84,7 +87,8 @@ export const recipesData = [
     {
         id: 4,
         name: 'Chicken Caesar Salad',
-        image: '/caesar-salad.jpg',
+        thumbnail: '/caesar-salad.jpg',
+        image2: '/caesar-salad2.jpg',
         type: 'Lunch',
         time: 20,
         kcal: 380,
@@ -113,7 +117,8 @@ export const recipesData = [
     {
         id: 5,
         name: 'Beef Stir Fry',
-        image: '/beef-stir-fry.jpg',
+        thumbnail: '/beef-stir-fry.jpg',
+        image2: '/beef-stir-fry2.jpg',
         type: 'Dinner',
         time: 30,
         kcal: 520,
@@ -146,7 +151,8 @@ export const recipesData = [
     {
         id: 6,
         name: 'Strawberry Banana Smoothie',
-        image: '/strawberry-smoothie.jpg',
+        thumbnail: '/strawberry-smoothie.jpg',
+        image2: '/strawberry-smoothie2.jpg',
         type: 'Drink',
         time: 5,
         kcal: 200,
@@ -172,7 +178,8 @@ export const recipesData = [
     {
         id: 7,
         name: 'Tuna Sandwich',
-        image: '/tuna-sandwich.jpg',
+        thumbnail: '/tuna-sandwich.jpg',
+        image2: '/tuna-sandwich2.jpg',
         type: 'Lunch',
         time: 10,
         kcal: 330,
@@ -202,7 +209,8 @@ export const recipesData = [
     {
         id: 8,
         name: 'Spaghetti Bolognese',
-        image: '/spaghetti.jpg',
+        thumbnail: '/spaghetti.jpg',
+        image2: '/tuna-spaghetti2.jpg',
         type: 'Dinner',
         time: 40,
         kcal: 650,
@@ -239,7 +247,8 @@ export const recipesData = [
     {
         id: 9,
         name: 'Apple with Peanut Butter',
-        image: '/apple-peanut-butter.jpg',
+        thumbnail: '/apple-peanut-butter.jpg',
+        image2: '/apple-peanut-butter2.jpg',
         type: 'Snack',
         time: 3,
         kcal: 220,
@@ -258,7 +267,8 @@ export const recipesData = [
     {
         id: 10,
         name: 'Green Tea Latte',
-        image: '/green-tea-latte2.jpg',
+        thumbnail: '/green-tea-latte2.jpg',
+        image2: '/green-tea-latte.jpg',
         type: 'Drink',
         time: 8,
         kcal: 180,
@@ -285,7 +295,8 @@ export const recipesData = [
     {
         id: 11,
         name: 'Veggie Omelette',
-        image: '/veggie-omelette.jpg',
+        thumbnail: '/veggie-omelette.jpg',
+        image2: '/veggie-omelette2.jpg',
         type: 'Breakfast',
         time: 15,
         kcal: 300,
@@ -318,7 +329,8 @@ export const recipesData = [
     {
         id: 12,
         name: 'Grilled Salmon with Asparagus',
-        image: '/grilled-salmon.jpg',
+        thumbnail: '/grilled-salmon.jpg',
+        image2: '/grilled-salmon2.jpg',
         type: 'Dinner',
         time: 25,
         kcal: 420,
@@ -349,7 +361,8 @@ export const recipesData = [
     {
         id: 13,
         name: 'Chicken curry',
-        image: '/chicken-curry.jpg',
+        thumbnail: '/chicken-curry.jpg',
+        image2: '/chicken-curry2.jpg',
         type: 'Dinner',
         time: 45,
         kcal: 550,
@@ -385,7 +398,8 @@ export const recipesData = [
     {
         id: 14,
         name: 'Vegetable Soup',
-        image: '/vegetable-soup.jpg',
+        thumbnail: '/vegetable-soup.jpg',
+        image2: '/vegetable-soup2.jpg',
         type: 'Lunch',
         time: 60,
         kcal: 180,
@@ -423,7 +437,8 @@ export const recipesData = [
     {
         id: 15,
         name: 'Mediterranean Quinoa Bowl',
-        image: '/quinoa-bowl.jpg',
+        thumbnail: '/quinoa-bowl.jpg',
+        image2: '/quinoa-bowl2.jpg',
         type: 'Lunch',
         time: 25,
         kcal: 410,
@@ -458,7 +473,8 @@ export const recipesData = [
     {
         id: 16,
         name: 'Sweet Potato Fries',
-        image: '/sweet-potato-fries.jpg',
+        thumbnail: '/sweet-potato-fries.jpg',
+        image2: '/sweet-potato-fries2.jpg',
         type: 'Snack',
         time: 35,
         kcal: 220,
@@ -490,7 +506,8 @@ export const recipesData = [
     {
         id: 17,
         name: 'Black Bean Burgers',
-        image: '/black-bean-burger.jpg',
+        thumbnail: '/black-bean-burger.jpg',
+        image2: '/black-bean-burger2.jpg',
         type: 'Dinner',
         time: 40,
         kcal: 320,
@@ -526,7 +543,8 @@ export const recipesData = [
     {
         id: 18,
         name: 'Lemon Garlic Butter Shrimp Pasta',
-        image: '/shrimp-pasta.jpg',
+        thumbnail: '/shrimp-pasta.jpg',
+        image2: '/shrimp-pasta2.jpg',
         type: 'Dinner',
         time: 20,
         kcal: 480,
@@ -560,7 +578,8 @@ export const recipesData = [
     {
         id: 19,
         name: 'Mango Chia Pudding',
-        image: '/mango-chia.jpg',
+        thumbnail: '/mango-chia.jpg',
+        image2: '/mango-chia2.jpg',
         type: 'Breakfast',
         time: 10,
         kcal: 280,
@@ -590,7 +609,8 @@ export const recipesData = [
     {
         id: 20,
         name: 'Caprese Stuffed Chicken Breast',
-        image: '/caprese-chicken.jpg',
+        thumbnail: '/caprese-chicken.jpg',
+        image2: '/caprese-chicken2.jpg',
         type: 'Dinner',
         time: 35,
         kcal: 420,
@@ -627,7 +647,8 @@ export const recipesData = [
     {
         id: 21,
         name: 'Rainbow Buddha Bowl',
-        image: '/buddha-bowl.jpg',
+        thumbnail: '/buddha-bowl.jpg',
+        image2: '/buddha-bowl2.jpg',
         type: 'Lunch',
         time: 30,
         kcal: 450,
@@ -664,7 +685,8 @@ export const recipesData = [
     {
         id: 22,
         name: 'Chocolate Protein Banana Bread',
-        image: '/protein-banana-bread.jpg',
+        thumbnail: '/protein-banana-bread.jpg',
+        image2: '/protein-banana-bread2.jpg',
         type: 'Snack',
         time: 65,
         kcal: 220,
@@ -700,7 +722,8 @@ export const recipesData = [
     {
         id: 23,
         name: 'Mushroom Risotto',
-        image: '/mushroom-risotto.jpg',
+        thumbnail: '/mushroom-risotto.jpg',
+        image2: '/mushroom-risotto2.jpg',
         type: 'Dinner',
         time: 40,
         kcal: 480,
@@ -739,7 +762,8 @@ export const recipesData = [
     {
         id: 24,
         name: 'Pineapple Coconut Smoothie',
-        image: '/pineapple-smoothie2.jpg',
+        thumbnail: '/pineapple-smoothie2.jpg',
+        image2: '/pineapple-smoothie.jpg',
         type: 'Drink',
         time: 5,
         kcal: 240,
@@ -768,7 +792,8 @@ export const recipesData = [
     {
         id: 25,
         name: 'Zucchini Noodles with Pesto',
-        image: '/zucchini-pesto.jpg',
+        thumbnail: '/zucchini-pesto.jpg',
+        image2: '/zucchini-pesto2.jpg',
         type: 'Lunch',
         time: 15,
         kcal: 320,
@@ -801,7 +826,8 @@ export const recipesData = [
     {
         id: 26,
         name: 'Blueberry Overnight Oats',
-        image: '/overnight-oats.jpg',
+        thumbnail: '/overnight-oats.jpg',
+        image2: '/overnight-oats2.jpg',
         type: 'Breakfast',
         time: 5,
         kcal: 350,
@@ -831,7 +857,8 @@ export const recipesData = [
     {
         id: 27,
         name: 'Thai Coconut Curry Soup',
-        image: '/thai-soup.jpg',
+        thumbnail: '/thai-soup.jpg',
+        image2: '/thai-soup2.jpg',
         type: 'Lunch',
         time: 30,
         kcal: 410,
@@ -867,7 +894,8 @@ export const recipesData = [
     {
         id: 28,
         name: 'Stuffed Bell Peppers',
-        image: '/stuffed-peppers.jpg',
+        thumbnail: '/stuffed-peppers.jpg',
+        image2: '/stuffed-peppers2.jpg',
         type: 'Dinner',
         time: 50,
         kcal: 390,
@@ -905,7 +933,8 @@ export const recipesData = [
     {
         id: 29,
         name: 'Homemade Granola',
-        image: '/homemade-granola.jpg',
+        thumbnail: '/homemade-granola.jpg',
+        image2: '/homemade-granola2.jpg',
         type: 'Breakfast',
         time: 35,
         kcal: 280,
@@ -942,7 +971,8 @@ export const recipesData = [
     {
         id: 30,
         name: 'Cauliflower Pizza Crust',
-        image: '/cauliflower-pizza.jpg',
+        thumbnail: '/cauliflower-pizza.jpg',
+        image2: '/cauliflower-pizza2.jpg',
         type: 'Dinner',
         time: 45,
         kcal: 280,

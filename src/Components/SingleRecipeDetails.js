@@ -6,7 +6,8 @@ import { BsPeopleFill } from 'react-icons/bs';
 
 function SingleRecipeDetails({
     name,
-    image,
+    thumbnail,
+    image2,
     type,
     time,
     kcal,
@@ -97,10 +98,13 @@ function SingleRecipeDetails({
                 <aside>
                     <div className='image-wrapper'>
                         <Image
-                            src={image}
-                            alt='recipe thumbnail'
+                            src={thumbnail}
+                            alt={`${name} recipe thumbnail`}
                             height={500}
                             width={500}
+                            loading='eager'
+                            placeholder='blur'
+                            blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRg...'
                         />
                     </div>
                 </aside>
@@ -133,11 +137,15 @@ function SingleRecipeDetails({
             </article>
 
             <Image
-                src={image}
+                src={image2}
                 height={500}
                 width={500}
-                alt=''
+                alt={`${name} recipe image`}
+                loading='lazy'
+                placeholder='blur'
+                blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRg...'
                 style={{ objectFit: 'cover', overflow: 'visible' }}
+                className='recipe-image'
             />
         </section>
     );

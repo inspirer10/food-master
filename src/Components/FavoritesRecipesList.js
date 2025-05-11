@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { FiGrid, FiSearch } from 'react-icons/fi';
 import RecipeCard from './RecipeCard';
-
+import { FiGrid, FiSearch } from 'react-icons/fi';
 import { recipesData } from '/data/recipesData.js';
-//IMPORT FAVORITES DATA import { favoritesData } from '';
 
-function AllRecipesList() {
+function FavoritesRecipesList() {
     const categoriesData = [
         { name: 'All' },
         { name: 'Breakfast' },
@@ -14,7 +12,7 @@ function AllRecipesList() {
         { name: 'Snack' },
         { name: 'Drink' },
     ];
-    const [filteredRecipes, setFilteredRecipes] = useState(recipesData); //favoritesData
+    const [filteredRecipes, setFilteredRecipes] = useState(recipesData);
     const [searchValue, setSearchValue] = useState('');
     const [previousSearchedCat, setPreviousSearchedCat] = useState('All');
 
@@ -43,7 +41,6 @@ function AllRecipesList() {
             setPreviousSearchedCat(categoryName);
         }
     };
-
     return (
         <section className='recipes-list_section'>
             <div className='heading-wrapper'>
@@ -124,4 +121,4 @@ function AllRecipesList() {
     );
 }
 
-export default AllRecipesList;
+export default FavoritesRecipesList;
