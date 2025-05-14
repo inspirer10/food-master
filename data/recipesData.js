@@ -210,7 +210,7 @@ export const recipesData = [
         id: 8,
         name: 'Spaghetti Bolognese',
         thumbnail: '/spaghetti.jpg',
-        image2: '/tuna-spaghetti2.jpg',
+        image2: '/spaghetti2.jpg',
         type: 'Dinner',
         time: 40,
         kcal: 650,

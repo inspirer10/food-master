@@ -12,11 +12,12 @@ function RecipeCard({
     thumbnail,
     image2,
     type,
+    difficulty,
     time,
     kcal,
     proteins,
-    carbons,
     fats,
+    carbons,
 }) {
     const [isFavorite, setIsFavorite] = useState(false);
     const addToastRef = useRef(null);
@@ -55,7 +56,7 @@ function RecipeCard({
             removeToastRef.current.classList.add('active');
             setTimeout(() => {
                 removeToastRef.current.classList.remove('active');
-            }, 2000);
+            }, 1500);
         } else {
             // Add to favorites
             const newFavorite = {
@@ -63,8 +64,12 @@ function RecipeCard({
                 name,
                 thumbnail,
                 type,
+                difficulty,
                 time,
                 kcal,
+                proteins,
+                fats,
+                carbons,
             };
 
             localStorage.setItem(
@@ -78,7 +83,7 @@ function RecipeCard({
             addToastRef.current.classList.add('active');
             setTimeout(() => {
                 addToastRef.current.classList.remove('active');
-            }, 2000);
+            }, 1500);
         }
     };
 
@@ -91,12 +96,12 @@ function RecipeCard({
                 <Image
                     className='recipe-thumbnail'
                     src={thumbnail}
-                    height={400}
-                    width={400}
-                    alt='recipe thumbnail'
+                    height={450}
+                    width={450}
                     loading='lazy'
                     //placeholder='blur'
                     //blurDataURL={thumbnail}
+                    alt={`${name} thumbnail`}
                 />
             </Link>
 
@@ -119,6 +124,7 @@ function RecipeCard({
                     <MdAccessTime className='time-icon' />
                     {time} min
                 </p>
+                <p>{difficulty}</p>
                 <p>{type}</p>
             </div>
 
@@ -135,14 +141,6 @@ function RecipeCard({
                     <span>{proteins}P</span>
                     <span>{fats}F</span>
                     <span>{carbons}C</span>
-                </div>
-            </div>
-
-            <div className='toast'>
-                <ImCheckmark className='icon' />
-                <div>
-                    <h6>Success !</h6>
-                    <p>Added to Favorite List</p>
                 </div>
             </div>
 

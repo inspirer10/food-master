@@ -158,7 +158,6 @@
     align-items: flex-start;
     .stat-wrapper {
         h2 {
-            font-family: 'Instrument Serif', serif;
             font-family: "Lora", serif;
             font-size: 3.5rem;
             line-height: 1;
@@ -173,7 +172,9 @@
             }
         }
         p {
+            font-family: 'Open Sans', sans-serif;
             font-size: 18px;
+            font-weight: 500;
             color: rgb(125, 125, 125);
             line-height: 1.3;
             width: 80%;

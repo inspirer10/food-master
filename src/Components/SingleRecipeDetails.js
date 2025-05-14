@@ -99,12 +99,12 @@ function SingleRecipeDetails({
                     <div className='image-wrapper'>
                         <Image
                             src={thumbnail}
-                            alt={`${name} recipe thumbnail`}
                             height={500}
                             width={500}
                             loading='eager'
                             placeholder='blur'
                             blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRg...'
+                            alt={`${name} recipe thumbnail`}
                         />
                     </div>
                 </aside>
@@ -136,17 +136,18 @@ function SingleRecipeDetails({
                 </div>
             </article>
 
-            <Image
-                src={image2}
-                height={500}
-                width={500}
-                alt={`${name} recipe image`}
-                loading='lazy'
-                placeholder='blur'
-                blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRg...'
-                style={{ objectFit: 'cover', overflow: 'visible' }}
-                className='recipe-image'
-            />
+            <div className='recipe-image_wrapper'>
+                <Image
+                    className='recipe-image'
+                    src={image2}
+                    height={600}
+                    width={1100}
+                    loading='lazy'
+                    placeholder='blur'
+                    blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRg...'
+                    alt={`${name} recipe image`}
+                />
+            </div>
         </section>
     );
 }

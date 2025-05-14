@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import RecipeCard from './RecipeCard';
 import { FiGrid, FiSearch } from 'react-icons/fi';
-import { recipesData } from '/data/recipesData.js';
+//import { recipesData } from '/data/recipesData.js';
 
 function FavoritesRecipesList() {
     const categoriesData = [
@@ -12,9 +12,18 @@ function FavoritesRecipesList() {
         { name: 'Snack' },
         { name: 'Drink' },
     ];
-    const [filteredRecipes, setFilteredRecipes] = useState(recipesData);
+    const [favoriteRecipes, setFavoriteRecipes] = useState([]);
+    const [filteredRecipes, setFilteredRecipes] = useState([]);
     const [searchValue, setSearchValue] = useState('');
     const [previousSearchedCat, setPreviousSearchedCat] = useState('All');
+
+    // Load favorites from localStorage on component mount
+    useEffect(() => {
+        const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+        const reversedFavorites = [...favorites].reverse();
+        setFavoriteRecipes(reversedFavorites);
+        setFilteredRecipes(reversedFavorites);
+    }, []);
 
     const handleInputChange = (e) => {
         const newSearchValue = e.target.value;
@@ -29,12 +38,12 @@ function FavoritesRecipesList() {
     };
 
     const handleCategoryChoice = (categoryName) => {
-        const filteredRecipes = recipesData.filter((item) =>
+        const filteredRecipes = favoriteRecipes.filter((item) =>
             item.type.includes(categoryName)
         );
 
         if (categoryName === previousSearchedCat || categoryName === 'All') {
-            setFilteredRecipes(recipesData);
+            setFilteredRecipes(favoriteRecipes);
             setPreviousSearchedCat('All');
         } else {
             setFilteredRecipes(filteredRecipes);
@@ -62,7 +71,7 @@ function FavoritesRecipesList() {
                     />
 
                     <datalist id='recipes-suggestions'>
-                        {recipesData.map(({ id, name }) => (
+                        {filteredRecipes.map(({ id, name }) => (
                             <option key={id} value={name} />
                         ))}
                     </datalist>
@@ -95,6 +104,7 @@ function FavoritesRecipesList() {
                         thumbnail,
                         image2,
                         type,
+                        difficulty,
                         time,
                         kcal,
                         proteins,
@@ -108,6 +118,7 @@ function FavoritesRecipesList() {
                             thumbnail={thumbnail}
                             image2={image2}
                             type={type}
+                            difficulty={difficulty}
                             time={time}
                             kcal={kcal}
                             proteins={proteins}

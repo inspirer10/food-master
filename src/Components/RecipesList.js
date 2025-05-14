@@ -82,11 +82,12 @@ function RecipesList() {
                         thumbnail,
                         image2,
                         type,
+                        difficulty,
                         time,
                         kcal,
                         proteins,
-                        carbons,
                         fats,
+                        carbons,
                     }) => (
                         <RecipeCard
                             key={id}
@@ -95,11 +96,12 @@ function RecipesList() {
                             thumbnail={thumbnail}
                             image2={image2}
                             type={type}
+                            difficulty={difficulty}
                             time={time}
                             kcal={kcal}
                             proteins={proteins}
-                            carbons={carbons}
                             fats={fats}
+                            carbons={carbons}
                         />
                     )
                 )}
