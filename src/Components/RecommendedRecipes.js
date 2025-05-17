@@ -27,6 +27,7 @@ function RecommendedRecipes() {
                         thumbnail,
                         image2,
                         type,
+                        difficulty,
                         time,
                         kcal,
                         proteins,
@@ -40,6 +41,7 @@ function RecommendedRecipes() {
                             thumbnail={thumbnail}
                             image2={image2}
                             type={type}
+                            difficulty={difficulty}
                             time={time}
                             kcal={kcal}
                             proteins={proteins}

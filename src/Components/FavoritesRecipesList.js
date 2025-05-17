@@ -29,7 +29,7 @@ function FavoritesRecipesList() {
         const newSearchValue = e.target.value;
         setSearchValue(newSearchValue);
 
-        const filteredResults = recipesData.filter((item) =>
+        const filteredResults = favoriteRecipes.filter((item) =>
             item.name.toLowerCase().includes(newSearchValue.toLowerCase())
         );
 
@@ -52,6 +52,12 @@ function FavoritesRecipesList() {
     };
     return (
         <section className='recipes-list_section'>
+            {favoriteRecipes.length === 0 && (
+                <h2 className='empty-state'>
+                    You need to find your favorite Recipe!
+                </h2>
+            )}
+
             <div className='heading-wrapper'>
                 <h2>
                     <FiGrid className='icon' /> Our amazing recipes

@@ -147,3 +147,27 @@
         border-radius: 20px;
     }
 }
+
+@media screen and (max-width: 1600px) {
+    .foodSaver_section {
+        width: 92.5%;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .foodSaver_section {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .foodSaver_section {
+        width: 97.5%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .foodSaver_section {
+        width: calc(100% - 1.5rem);
+    }
+}

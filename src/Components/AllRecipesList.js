@@ -98,6 +98,7 @@ function AllRecipesList() {
                         thumbnail,
                         image2,
                         type,
+                        difficulty,
                         time,
                         kcal,
                         proteins,
@@ -110,6 +111,7 @@ function AllRecipesList() {
                             name={name}
                             thumbnail={thumbnail}
                             image2={image2}
+                            difficulty={difficulty}
                             type={type}
                             time={time}
                             kcal={kcal}

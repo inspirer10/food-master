@@ -48,3 +48,36 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: 1600px) {
+    footer {
+        .footer_content {
+            width: 87.5%;
+        }
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    footer {
+        .footer_content {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    footer .footer_content .links-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    footer {
+        .footer_content {
+            width: 95%;
+        }
+    }
+}

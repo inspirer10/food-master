@@ -239,7 +239,7 @@
 
 .recommendedRecipes_section {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 7.5vh;
     text-align: center;
     h2 {
         font-family: 'Lora', serif;
@@ -455,5 +455,47 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .single-recipe_section {
+        width: 90%;
+    }
+    .recommendedRecipes_section {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .single-recipe_section {
+        width: 92.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .upper_wrapper {
+            width: 90%;
+        }
+        .recipe-image {
+            width: 100%;
+        }
+    }
+    .recommendedRecipes_section {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .single-recipe_section {
+        width: 95%;
+        .upper_wrapper {
+            width: 90%;
+        }
+        .recipe-image {
+            width: 100%;
+        }
+    }
+    .recommendedRecipes_section {
+        width: 97.5%;
     }
 }

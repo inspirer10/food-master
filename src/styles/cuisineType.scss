@@ -72,3 +72,27 @@
         }
     }
 }
+
+@media screen and (max-width: 1600px) {
+    .explore-cuisineType_section {
+        width: 87.5%;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .explore-cuisineType_section {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .explore-cuisineType_section {
+        width: 92.5%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .explore-cuisineType_section {
+        width: 95%;
+    }
+}

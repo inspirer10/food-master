@@ -119,3 +119,34 @@ header {
         }
     }
 }
+
+@media screen and (max-width: 1600px) {
+    header {
+        nav {
+            width: 87.5%;
+        }
+        .links-wrapper {
+            width: 47.5%;
+        }
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    header {
+        nav {}
+        .links-wrapper {
+            width: 52.5%;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    header {
+        nav {
+            width: 92.5%;
+        }
+        .links-wrapper {
+            width: 57.5%;
+        }
+    }
+}

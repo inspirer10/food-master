@@ -63,3 +63,25 @@
         }
     }
 }
+
+@media screen and (max-width: 1600px) {
+    .faq_section {
+        width: 87.5%;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .faq_section {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .faq_section {}
+}
+
+@media screen and (max-width: 1300px) {
+    .faq_section {
+        width: 92.5%;
+    }
+}

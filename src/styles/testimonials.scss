@@ -204,3 +204,21 @@
         }
     }
 }
+
+@media screen and (max-width: 1600px) {
+    .testimonials_section {
+        width: 87.5%;
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .testimonials_section {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .testimonials_section {
+        width: 92.5%;
+    }
+}

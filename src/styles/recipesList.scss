@@ -49,6 +49,15 @@
             }
         }
     }
+    .empty-state {
+        font-family: "SUSE", sans-serif;
+        font-size: 2.75rem;
+        font-weight: 600;
+        color: rgb(0, 60, 0);
+        text-align: center;
+        letter-spacing: -0.75px;
+        margin-bottom: 2.5rem;
+    }
     .heading-wrapper {
         display: flex;
         justify-content: space-between;
@@ -355,5 +364,46 @@
         &:hover {
             color: rgb(100, 100, 100);
         }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .recipes-list_section {
+        width: 90%;
+        padding: 12.5vh 0 0;
+        .heading {
+            font-size: 4.75rem;
+        }
+        .subHeading {
+            font-size: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .recipes-list_section {
+        width: 92.5%;
+        .recipes-container {
+            gap: 1.25%;
+            .recipe_card {
+                width: 32.5%;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .recipes-list_section {
+        width: 95%;
+        .subHeading {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .recipes-list_section {
+        width: calc(95% + 1rem);
     }
 }
