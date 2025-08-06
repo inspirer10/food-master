@@ -39,6 +39,7 @@
                     line-height: 1.1;
                     padding: 2px;
                     transition: .275s ease;
+                    transition-delay: 0.05s;
                     color: rgb(85, 85, 85);
                     cursor: pointer;
                     &:hover {
@@ -72,6 +73,7 @@
                     gap: 5px;
                     letter-spacing: -0.25px;
                     transition: 0.175s ease-in-out;
+                    transition-delay: 0.05s;
                     cursor: pointer;
                     &:hover {
                         transform: translateY(-3px);
@@ -91,6 +93,7 @@
                     font-weight: 600;
                     line-height: 1.22;
                     transition: 0.275s ease;
+                    transition-delay: 0.05s;
                     span {
                         font-weight: 400;
                         color: rgb(150, 150, 150);
@@ -122,6 +125,7 @@
                     position: relative;
                     cursor: pointer;
                     transition: .15s ease-in-out;
+                    transition-delay: 0.05s;
                     &::after {
                         content: '';
                         position: absolute;
@@ -132,6 +136,7 @@
                         height: 2px;
                         background-color: rgb(35, 35, 35);
                         transition: .15s ease-in-out;
+                        transition-delay: 0.05s;
                     }
                     &:hover {
                         color: rgb(105, 105, 105);
@@ -153,6 +158,7 @@
                     &::marker {
                         color: rgb(0, 0, 0);
                         transition: .15s ease-in-out;
+                        transition-delay: 0.05s;
                     }
                 }
             }
@@ -197,6 +203,7 @@
                 align-items: center;
                 cursor: pointer;
                 transition: 0.175s ease-in-out;
+                transition-delay: 0.05s;
                 span {
                     letter-spacing: -0.75px;
                     color: rgb(175, 175, 175);
@@ -216,6 +223,7 @@
                     opacity: 0;
                     color: rgb(0, 100, 0);
                     transition: 0.125s ease-in-out;
+                    transition-delay: 0.05s;
                     &.done {
                         opacity: 1;
                     }
@@ -231,6 +239,7 @@
         border-radius: 16px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 15px 35px rgba(0, 0, 0, 0.05), 0 50px 65px rgba(50, 50, 50, 0.07);
         transition: box-shadow 0.3s ease-in-out;
+        transition-delay: 0.05s;
         &:hover {
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 20px 40px rgba(0, 0, 0, 0.1), 0 60px 80px rgba(50, 50, 50, 0.12);
         }
@@ -279,6 +288,7 @@
             overflow: hidden;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.03);
             transition: .2s ease;
+            transition-delay: 0.05s;
             .toast {
                 text-align: left;
                 position: fixed;
@@ -297,6 +307,7 @@
                 &.active {
                     transform: translateX(0);
                     transition: transform 0.275s ease-in;
+                    transition-delay: 0.05s;
                 }
                 &.success {
                     z-index: 10001;
@@ -350,6 +361,7 @@
                 opacity: 0;
                 cursor: pointer;
                 transition: opacity .275s ease-in-out, border-color .175s ease-in-out, background-color .175s ease-in-out;
+                transition-delay: 0.05s;
                 &:hover {
                     border-color: rgb(100, 100, 100);
                     background-color: #FFF;
@@ -361,6 +373,7 @@
                 .fav-icon {
                     font-size: 18px;
                     transition: .18s ease-in-out;
+                    transition-delay: 0.05s;
                 }
             }
             &:hover {

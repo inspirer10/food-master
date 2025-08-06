@@ -7,7 +7,8 @@ header {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(3px);
-    transition: transform 0.275s ease, opacity 0.275s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition-delay: 0.05s;
     &.hidden {
         opacity: 0;
         transform: translate(-50%, -150%);
@@ -46,7 +47,8 @@ header {
             bottom: -2px;
             left: 0;
             transform: scaleX(0);
-            transition: transform 0.25s ease-in-out;
+            transition: transform 0.225s ease;
+            transition-delay: 0.05s;
         }
         &:hover {
             &::after {
@@ -81,6 +83,7 @@ header {
             letter-spacing: -0.25px;
             text-transform: uppercase;
             transition: .3s ease;
+            transition-delay: 0.05s;
             &:hover {
                 color: #000;
                 background-color: lightgreen;
@@ -97,7 +100,8 @@ header {
             outline: none;
             padding: 10px 1.5rem;
             cursor: pointer;
-            transition: .325s ease;
+            transition: .3s ease;
+            transition-delay: 0.05s;
         }
         .contact-btn {
             color: #000;
@@ -114,7 +118,7 @@ header {
             border: 1px solid rgb(25, 25, 25);
             border-radius: 12px;
             &:hover {
-                background-color: rgb(55, 55, 55);
+                background-color: rgb(62, 62, 62);
             }
         }
     }
@@ -147,6 +151,30 @@ header {
         }
         .links-wrapper {
             width: 57.5%;
+        }
+    }
+}
+
+//* AI RACZEJ DO ZMIANY
+@media screen and (max-width: 650px) {
+    header {
+        nav {
+            flex-direction: column;
+            align-items: center;
+        }
+        .name {
+            width: 100%;
+            justify-content: center;
+        }
+        .links-wrapper {
+            width: 100%;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        .buttons-wrapper {
+            width: 100%;
+            justify-content: center;
+            margin-top: 0.5rem;
         }
     }
 }

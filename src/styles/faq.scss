@@ -4,7 +4,7 @@
     width: 85%;
     text-align: center;
     h2 {
-        font-size: 3.75rem;
+        font-size: 4rem;
         font-weight: 600;
     }
     .subHeading {
@@ -12,7 +12,7 @@
         font-size: 1.5rem;
         font-weight: 400;
         letter-spacing: -0.5px;
-        color: rgb(150, 150, 150);
+        color: rgb(140, 140, 140);
         margin-bottom: 2rem;
     }
     .faq-wrapper {
@@ -83,5 +83,40 @@
 @media screen and (max-width: 1300px) {
     .faq_section {
         width: 92.5%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .faq_section {
+        padding-top: 5rem;
+        width: 97.5%;
+        margin-bottom: 7.5rem;
+        h2 {
+            font-size: 2.75rem;
+        }
+        .subHeading {
+            font-size: 18px;
+            margin-bottom: 1.75rem;
+        }
+        .faq-wrapper {
+            margin-bottom: 1.75rem;
+            align-items: flex-start !important;
+            .number {
+                font-size: 3rem;
+                margin-left: 0.25rem;
+                margin-bottom: 0.5rem;
+            }
+            .question {
+                width: 100%;
+                font-size: 1rem;
+                margin-top: -2.25rem;
+                text-align: center !important;
+            }
+            .answer {
+                width: 100%;
+                font-size: 14px;
+                text-align: center !important;
+            }
+        }
     }
 }

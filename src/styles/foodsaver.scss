@@ -75,6 +75,7 @@
                 cursor: pointer;
                 //transition: .18s ease-in-out;
                 transition: .3s ease;
+                transition-delay: 0.05s;
                 span {
                     font-weight: 600;
                 }
@@ -86,8 +87,8 @@
             .page-btn {
                 font-weight: 500;
                 gap: 0.5rem;
-                border-radius: 12px;
-                background-color: #000;
+                border-radius: 10px;
+                background-color: rgb(10, 10, 10);
                 color: #FFF;
                 &:hover {
                     background-color: lightgreen;
@@ -113,6 +114,11 @@
             height: 6rem;
             width: 6rem;
             user-select: none;
+            transition: .2s ease;
+            transition-delay: 0.05s;
+            &:hover {
+                background-color: rgb(20, 20, 20);
+            }
             &:nth-of-type(1) {
                 top: -12.5%;
                 right: 0;
@@ -169,5 +175,53 @@
 @media screen and (max-width: 1300px) {
     .foodSaver_section {
         width: calc(100% - 1.5rem);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .foodSaver_section {
+        width: 98.5%;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0.25rem;
+        border-radius: 20px;
+        margin-bottom: 2.5rem;
+        article {
+            text-align: center;
+            .recommendation {
+                font-size: 16px;
+                padding: 10px 20px;
+                margin: 0 auto 1.5rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+            h3 {
+                font-size: 2.75rem;
+                margin: 0.25rem auto;
+            }
+            .subHeading {
+                font-size: 18px;
+                margin-bottom: 1.5rem;
+            }
+            .buttons-wrapper {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+                margin-top: 1rem;
+                .app-btn,
+                .page-btn {
+                    width: 95%;
+                    padding: 10px 0;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .food-emojis-wrapper {
+            display: none;
+        }
+        .app-image {
+            width: 100%;
+        }
     }
 }

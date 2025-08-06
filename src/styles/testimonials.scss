@@ -80,7 +80,7 @@
         div {
             width: 25%;
             background-color: rgb(255, 230, 200);
-            padding: 1rem 1rem 6rem;
+            padding: 1rem 1rem 7.5rem;
             border-radius: 8px;
             position: relative;
             user-select: none;
@@ -220,5 +220,89 @@
 @media screen and (max-width: 1300px) {
     .testimonials_section {
         width: 92.5%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .testimonials_section {
+        width: 97.5%;
+        h2 {
+            font-size: 2.5rem;
+            &::after {
+                display: none;
+            }
+        }
+        .subHeading {
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 0.5rem;
+        }
+        .benefits-container {
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 3.5rem;
+            .card {
+                width: 100%;
+                margin-bottom: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                span {
+                    font-size: 2rem;
+                }
+                h5 {
+                    font-size: 20px;
+                }
+                .text {
+                    font-size: 17px;
+                    text-align: center;
+                }
+            }
+        }
+        .additional-benefits-header {
+            text-align: center;
+            margin-top: 5rem;
+        }
+        .additional-benefits-container {
+            flex-direction: column;
+            div {
+                width: 100%;
+                margin-bottom: 2px;
+            }
+        }
+        .happy-users-container {
+            h3 {
+                font-size: 2.5rem;
+                text-wrap: balance;
+            }
+            .subHeading {
+                font-size: 20px;
+            }
+            .cards-wrapper {
+                flex-direction: column;
+                align-items: center;
+                .card {
+                    width: 100%;
+                    margin-bottom: 0.25rem;
+                    aspect-ratio: 1/1.1;
+                    .image {}
+                    .text-content {
+                        width: 100%;
+                        padding: 1rem 0.25rem;
+                        .icon {
+                            font-size: 16px;
+                        }
+                        .quote {
+                            font-size: 14px;
+                        }
+                        .user {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

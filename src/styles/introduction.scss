@@ -34,8 +34,9 @@
                 object-fit: cover;
                 border: 1px solid rgb(215, 215, 215);
                 border-radius: 10px;
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 will-change: transform, z-index;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                transition-delay: 0.025s;
                 &:nth-of-type(1) {
                     z-index: 20;
                     transform: translate(0%, 0.25rem) scale(1);
@@ -238,5 +239,35 @@
     }
     .app-stats-container {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .introduction_section {
+        width: 97.5%;
+        padding: 30vh 0 5vh;
+        h2 {
+            font-size: 2.5rem;
+        }
+        .subHeading {
+            font-size: 18px;
+            letter-spacing: 0;
+        }
+    }
+    .app-stats-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .stat-wrapper {
+            width: 100%;
+            text-align: center;
+            h2 {
+                font-size: 2.5rem;
+            }
+            p {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
     }
 }

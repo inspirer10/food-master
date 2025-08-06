@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 import { FaFacebook, FaTiktok } from 'react-icons/fa';
@@ -10,46 +11,46 @@ function Footer() {
                 <div className='links-wrapper'>
                     <h6>Recipes</h6>
                     <p>
-                        <a href='/breakfast'>Breakfast</a>
+                        <Link href='/breakfast'>Breakfast</Link>
                     </p>
                     <p>
-                        <a href='/lunch'>Lunch</a>
+                        <Link href='/lunch'>Lunch</Link>
                     </p>
                     <p>
-                        <a href='/dinner'>Dinner</a>
+                        <Link href='/dinner'>Dinner</Link>
                     </p>
                     <p>
-                        <a href='/snacks'>Snacks</a>
+                        <Link href='/snacks'>Snacks</Link>
                     </p>
                 </div>
                 <div className='links-wrapper'>
                     <h6>User Account</h6>
                     <p>
-                        <a href='/profile'>My Profile</a>
+                        <Link href='/profile'>My Profile</Link>
                     </p>
                     <p>
-                        <a href='/favorites'>Saved Recipes</a>
+                        <Link href='/favorites'>Saved Recipes</Link>
                     </p>
                     <p>
-                        <a href='/planner'>Meal Planner</a>
+                        <Link href='/planner'>Meal Planner</Link>
                     </p>
                     <p>
-                        <a href='/settings'>Settings</a>
+                        <Link href='/settings'>Settings</Link>
                     </p>
                 </div>
                 <div className='links-wrapper'>
                     <h6>About Us</h6>
                     <p>
-                        <a href='/about'>Our Story</a>
+                        <Link href='/about'>Our Story</Link>
                     </p>
                     <p>
-                        <a href='/team'>FAQ</a>
+                        <Link href='/team'>FAQ</Link>
                     </p>
                     <p>
-                        <a href='/blog'>Blog</a>
+                        <Link href='/blog'>Blog</Link>
                     </p>
                     <p>
-                        <a href='/careers'>Careers</a>
+                        <Link href='/careers'>Careers</Link>
                     </p>
                 </div>
                 <div className='links-wrapper'>

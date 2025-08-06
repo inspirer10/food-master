@@ -96,8 +96,8 @@ function RecipeCard({
                 <Image
                     className='recipe-thumbnail'
                     src={thumbnail}
-                    height={450}
-                    width={450}
+                    height={425}
+                    width={425}
                     loading='lazy'
                     //placeholder='blur'
                     //blurDataURL={thumbnail}

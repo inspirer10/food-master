@@ -8,7 +8,7 @@ footer {
         justify-content: space-between;
         flex-direction: row;
         .links-wrapper {
-            width: 25%;
+            //width: 25%;
             h6 {
                 font-family: "SUSE", sans-serif;
                 font-size: 19px;
@@ -26,7 +26,8 @@ footer {
                 margin: 3px 0;
                 color: rgb(125, 125, 125);
                 width: fit-content;
-                transition: .15s ease-in-out;
+                transition: .2s ease;
+                transition-delay: 0.05s;
                 &:hover {
                     color: rgb(50, 50, 50);
                 }
@@ -36,11 +37,13 @@ footer {
                 gap: 1.75rem;
                 padding-top: 0.25rem;
                 .icon {
+                    font-size: 24px;
+                    will-change: transform;
                     cursor: pointer;
-                    font-size: 22px;
-                    transition: .15s ease-in-out;
+                    transition: .25s ease;
+                    transition-delay: 0.05s;
                     &:hover {
-                        color: rgb(35, 35, 35);
+                        color: rgb(45, 45, 45);
                         transform: scale(1.15);
                     }
                 }
@@ -77,7 +80,38 @@ footer {
 @media screen and (max-width: 1300px) {
     footer {
         .footer_content {
-            width: 95%;
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    footer {
+        padding-top: 0;
+        .footer_content {
+            flex-direction: column;
+            align-items: center;
+            .links-wrapper {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 1.25rem;
+                h6 {
+                    margin-bottom: 0.25rem;
+                    letter-spacing: 0;
+                }
+                p {
+                    font-size: 16px;
+                    margin: 3px 0;
+                }
+                .icons-wrapper {
+                    justify-content: center;
+                    gap: 2rem;
+                    margin-top: 0.5rem;
+                    .icon {
+                        font-size: 20px;
+                    }
+                }
+            }
         }
     }
 }
